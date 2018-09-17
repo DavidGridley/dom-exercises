@@ -81,3 +81,12 @@ const characters = [
 		"eye_color": "blue-gray"
 	}
 ];
+
+
+const liCreate = characters.map(function (character) {
+  const charClass = document.querySelector(".characters");
+  let characterLi = document.createElement("li");
+  characterLi.className = "characterItem";
+  characterLi.textContent = `${character.name} ${character.height} ${character.mass} ${character.hair_color} ${character.skin_color} ${character.eye_color}`;
+  charClass.appendChild(characterLi);
+})
